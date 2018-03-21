@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find PI to the Nth Digit</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		
+		function findPi(){
+			
+
+			var input = document.getElementById("userInput").value;
+			var n=1;
+			if(input <= 10){
+				for (i=0;i<=1000;i++)
+				{
+					input=input+(4/n)
+					n=n+2
+					input=input-(4/n)
+					n=n+2
+				}
+				alert(input.toFixed(4));
+			}else{
+				alert("You cannot enter a number greater than 10");
+			}
+
+		}
+	</script>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Find PI</h1>
+		<input type="text" id="userInput">
+		<button type="button" onclick="javascript: findPi()">Go</button>
+	</div>
+	
+</body>
+</html>
